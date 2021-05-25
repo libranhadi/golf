@@ -1,6 +1,5 @@
 @extends('layouts.app', ['title' => 'Jadwal'])
 @push('after-style')
-        {{-- <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" /> --}}
 
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <style>
@@ -8,6 +7,8 @@
                 color: rebeccapurple;
             }
         </style>
+         <link type="text/css" rel="stylesheet" href="{{ mix('css/app.css') }}">
+         {{-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css"> --}}
 @endpush
 @section('content')
 <div class="page=content page-jadwal">
@@ -20,6 +21,8 @@
                         <hr>
                         <input width="276" id="harga" type="integer"class="harga"/>
                         <p id="demo"></p>
+                        <input width="276" id="time" class="harga"/>
+                        
                 </div>
             </div>
         </div>
@@ -28,17 +31,19 @@
 @endsection
 @push('after-script')
 
-      {{-- <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script> --}}
        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+         {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"></script> --}}
+    <script type="text/javascript" src="{{ mix('js/app.js') }}"></script>
+    {{-- <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script> --}}
+
 <script>
 console.firebug=true;
-    
-
      $(document).ready(function() {
-      
+        
          $('#datepicker').datepicker({
+             dateFormat: 'dd-DD-mm-yy',
               minDate: new Date(),
-               dayNames: [ "Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi" ],
+               dayNames: [ "Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu" ],
 
         //    buttonImage: for image
         });
@@ -60,16 +65,23 @@ console.firebug=true;
                     
                 }
             }
-            console.log(jsDate);
+            // console.log(jsDate);
            
          });
-     
-    });
-     
- 
 
-     
-        
+           $('#time').timepicker({
+               timeFormat: 'hh:mm p',
+                interval: 30,
+                minTime: '6:30',
+                maxTime: '3:00pm',
+                defaultTime: '08:00',
+                startTime: '06:30',
+                dynamic: false,
+                dropdown: true,
+                scrollbar: true
+            });
+
+    }); 
 
 </script>
 @endpush
