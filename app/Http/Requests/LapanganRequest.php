@@ -25,7 +25,7 @@ class LapanganRequest extends FormRequest
     {
         return [
             'kode_lapangan' => 'required|string',
-            'tee_box' => 'required|integer',
+            'tee_box' => 'required',
             
         ];
     }

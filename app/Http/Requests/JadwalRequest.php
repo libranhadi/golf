@@ -13,7 +13,7 @@ class JadwalRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,11 @@ class JadwalRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'users_id' => 'required|exists:users,id',
+            'id_lapangan' => 'required',
+            'harga' => 'required|integer',
+            'tanggal_main' => 'required',
+            'jam_mulai' => 'required',
         ];
     }
 }

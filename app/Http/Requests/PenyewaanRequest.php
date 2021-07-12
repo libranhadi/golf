@@ -13,7 +13,7 @@ class PenyewaanRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,9 @@ class PenyewaanRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'users_id' => 'required',
+            'id_jadwal' => 'required',
+            'status_penyewaan' => 'required',
         ];
     }
 }

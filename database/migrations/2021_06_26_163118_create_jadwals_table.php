@@ -14,12 +14,13 @@ class CreateJadwalsTable extends Migration
     public function up()
     {
         Schema::create('jadwals', function (Blueprint $table) {
-            $table->id();
-            $table->integer('id_penyewaan');
-            $table->integer('id_lapangan');
+             $table->id();
+            $table->unsignedBigInteger('users_id')->nullable();
+           $table->unsignedBigInteger('id_lapangan')->nullable();
+           $table->string('kode_jadwal', 20);
+           $table->integer('harga');
             $table->date('tanggal_main');
             $table->time('jam_mulai');
-            // $table->timestamps();
         });
     }
 

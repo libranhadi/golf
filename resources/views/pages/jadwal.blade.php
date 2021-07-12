@@ -1,27 +1,40 @@
-@extends('layouts.app', ['title' => 'Jadwal'])
+@extends('layouts.test', ['title' => 'Jadwal'])
 @push('after-style')
-
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <style>
-            .harga{
-                color: rebeccapurple;
-            }
-        </style>
-         <link type="text/css" rel="stylesheet" href="{{ mix('css/app.css') }}">
-         {{-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css"> --}}
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.22/datatables.min.css"/>
 @endpush
 @section('content')
-<div class="page=content page-jadwal">
+<div class="page-jadwal">
     <section class="section-jadwal">
         <div class="container">
-            <div class="row">
-                <div class="col-8">
-                    <h1>KALENDER</h1>
-                        <input id="datepicker" width="276"/>
-                        <hr>
-                        <input width="276" id="harga" type="integer"class="harga"/>
-                        <p id="demo"></p>
-                        <input width="276" id="time" class="harga"/>
+            <div class="row justify-content-center">
+                <div class="col-md-12 col-sm-10">
+                    
+                    <div class="card">
+                        <div class="dashboard-title py-3 px-4">
+                            Jadwal Sawangan Golf Course
+                        </div>
+                        <div class="card-body">
+                              <div class="table table-responsive">
+                                            <table class="table-hover scroll-horizontal-vertical w-100" id="crudTable">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Nama Pelanggan</th>
+                                                        <th>Tanggal</th>
+                                                        <th>Jam</th>
+                                                        <th>Tee Box</th>
+                                                   
+
+                                                        
+                                                    </tr>
+
+                                                </thead>
+                                                    <tbody>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>     
+                        </div>
+                    </div>
                         
                 </div>
             </div>
@@ -30,58 +43,25 @@
 </div>
 @endsection
 @push('after-script')
-
-       <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-         {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"></script> --}}
-    <script type="text/javascript" src="{{ mix('js/app.js') }}"></script>
-    {{-- <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script> --}}
-
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.22/datatables.min.js"></script>
 <script>
-console.firebug=true;
-     $(document).ready(function() {
-        
-         $('#datepicker').datepicker({
-             dateFormat: 'dd-DD-mm-yy',
-              minDate: new Date(),
-               dayNames: [ "Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu" ],
+    var datatable = $('#crudTable').DataTable({
+        processing : true,
+        serverSide : true,
+        ordering : true,
+        ajax: {
+            url: '{!! url()->current() !!}',
+        },
+        columns: [
+            {data: 'user.name' , name: 'user.name'},
+            {data: 'tanggal_main' , name: 'tanggal_main'},
+            {data: 'jam_mulai' , name: 'jam_mulai'},
+            {data: 'lapangan.tee_box' , name: 'lapangan.tee_box'},
 
-        //    buttonImage: for image
-        });
-      
-    
-         $('#datepicker').change( function(){
-            
-            var jsDate = $(this).datepicker('getDate');
-            if (jsDate !== null) { // if any date selected in datepicker
-                // jsDate instanceof Date; // -> true
-                var y = jsDate.getDay();
-                // jsDate.getMonth();
-                // jsDate.getFullYear();
-                if (y == 0 || y == 6) {
-                    $('#harga').val(350000);
-                    
-                } else {
-                    $('#harga').val(250000);
-                    
-                }
-            }
-            // console.log(jsDate);
-           
-         });
 
-           $('#time').timepicker({
-               timeFormat: 'hh:mm p',
-                interval: 30,
-                minTime: '6:30',
-                maxTime: '3:00pm',
-                defaultTime: '08:00',
-                startTime: '06:30',
-                dynamic: false,
-                dropdown: true,
-                scrollbar: true
-            });
-
-    }); 
-
+       
+         
+        ]
+    }) 
 </script>
 @endpush

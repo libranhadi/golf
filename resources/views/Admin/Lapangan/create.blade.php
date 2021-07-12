@@ -1,10 +1,10 @@
-@extends('layouts.app' , ['title' => 'Category' ])
+@extends('layouts.admin' , ['title' => 'Category' ])
 @section('content')
 
 <div class="container">
      <div class="row">
         <div class="col-md-12">
-                                    @if ($errors->any())
+             @if ($errors->any())
                                         <div class="alert alert-danger">
                                             <ul>
                                                 @foreach ($errors->all() as $error)
@@ -12,15 +12,12 @@
                                                 @endforeach
                                             </ul>
                                         </div>
-                                    @endif
+                @endif
         </div>
+    
     <div class="col-md-10 mt-4">
-
-
     <div class="d-flex justify-content-center">
-
-        
-        <form method="POST" action="{{ Route('store_lapangan') }}">
+        <form method="POST" action="{{ Route('admin-store-lapangan') }}">
             @csrf
             <div class="form-group">
                 <label for="code">Kode Lapangan</label>
@@ -30,7 +27,7 @@
                 <label for="teeBox">Tee Box</label>
                 <input type="number" class="form-control" id="teeBox" name="tee_box">
             </div>
-            <button class="btn btn-secondary">Save</button>
+            <button class="btn btn-primary">Save</button>
         </form>
     </div>
 </div>

@@ -1,0 +1,63 @@
+.golf-home {
+    .jumbotron {
+        // background-color: red;
+        min-height: 620px;
+        background-image: url("../../images/golf1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: 70%;
+        .text-jumbo {
+            margin-top: 150px;
+            .heading {
+                color: #ffffff;
+            }
+        }
+    }
+    .info {
+        .info-text {
+            font-weight: 300;
+            display: none;
+        }
+        .home-info {
+            font-weight: 300;
+        }
+        .button {
+            .detail {
+                background-color: #fda0a0;
+                &:hover {
+                    background-color: #0e0d0d;
+                    color: #fda0a0;
+                }
+            }
+        }
+        .price {
+            font-weight: bold;
+            color: #0a0a0a;
+            display: none;
+            .text-price {
+                margin-top: -14px;
+                margin-bottom: 5px;
+            }
+            .weekend {
+                color: #4cf363;
+            }
+            .weekday {
+                color: #f1c42d;
+            }
+        }
+        .home-price {
+            font-weight: bold;
+            color: #0a0a0a;
+            .text-price {
+                margin-top: -14px;
+                margin-bottom: 5px;
+            }
+            .weekend {
+                color: #4cf363;
+            }
+            .weekday {
+                color: #f1c42d;
+            }
+        }
+    }
+}

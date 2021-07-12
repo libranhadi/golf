@@ -4,6 +4,7 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -10816,5 +10817,420 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+
+.navbar-store {
+  padding-top: 15px;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-store {
+    background-color: #868686 !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-store .nav-item .nav-link {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #3a3a3a;
+    font-weight: bold;
+  }
+}
+
+.navbar-fixed-top.scrolled {
+  background-color: #ffffff;
+  -webkit-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+}
+
+@media (min-width: 992px) {
+  .navbar-fixed-top.scrolled .nav-link {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #8a8989;
+    font-weight: bold;
+  }
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.page-content {
+  margin-top: -50px;
+}
+
+footer {
+  border-top: 1px solid #e4e4e4;
+  margin-top: 150px;
+}
+
+footer p {
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #979797;
+}
+
+.form-control {
+  background-color: #f3f3f3;
+}
+
+.page-dashboard #page-content-wrapper {
+  background: #f5f5fb;
+  min-width: 100wh;
+}
+
+.page-dashboard #sidebar-wrapper {
+  margin-top: 60px;
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin 0.25s ease-out;
+  transition: margin 0.25s ease-out;
+}
+
+.page-dashboard #sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+.page-dashboard #sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+.page-dashboard #wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+.page-dashboard .navbar-store {
+  margin-top: 0;
+  background-color: #f5f5fb;
+  -webkit-box-shadow: 0px 3px 4px #cacad1;
+          box-shadow: 0px 3px 4px #cacad1;
+}
+
+@media (min-width: 768px) {
+  .page-dashboard .navbar-store {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
+.page-dashboard .list-group-item {
+  border: 0;
+  font-size: 16px;
+  color: #8c8ccf;
+}
+
+.page-dashboard .list-group-item.active {
+  background: -webkit-gradient(linear, right top, left top, color-stop(2%, rgba(255, 113, 88, 0.32)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(270deg, rgba(255, 113, 88, 0.32) 2%, rgba(255, 255, 255, 0) 100%);
+  border-right: 4px solid #ff7158;
+  color: #0c0d36;
+}
+
+@media (min-width: 768px) {
+  .page-dashboard #sidebar-wrapper {
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .page-dashboard #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+.page-dashboard .section-content {
+  margin-top: 100px;
+}
+
+.page-dashboard .section-content h5 {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 36px;
+  /* identical to box height */
+  color: #0c0d36;
+}
+
+.page-dashboard .section-content .dashboard-title {
+  font-weight: 400;
+  font-size: 24px;
+  /* identical to box height */
+  color: #0c0d36;
+}
+
+.page-dashboard .section-content .dashboard-subtitle {
+  font-weight: 300;
+  font-size: 16px;
+  /* identical to box height */
+  color: #9191a9;
+}
+
+.page-dashboard .section-content .product-title {
+  font-weight: normal;
+  font-size: 16px;
+  margin-top: 15px;
+  color: #c5c5c5;
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .page-dashboard .section-content .product-title {
+    margin-top: 0;
+    line-height: 24px;
+  }
+}
+
+.page-dashboard .section-content .product-subtitle {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+  /* identical to box height */
+  margin-bottom: 15px;
+  color: #0c0d36;
+}
+
+.page-dashboard .section-content h5 {
+  font-weight: normal;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  /* identical to box height */
+  color: #0c0d36;
+}
+
+@media (min-width: 768px) {
+  .page-dashboard .section-content {
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+}
+
+.page-dashboard .section-content .nav-pills .nav-link {
+  font-weight: 500;
+  font-size: 18px;
+  color: #9191a9;
+  border-radius: 0;
+}
+
+.page-dashboard .section-content .nav-pills .nav-link.active {
+  background: none;
+  border-bottom: 4px solid #0c0d36;
+  color: #0c0d36;
+}
+
+.page-dashboard .section-content .gallery-container .delete-gallery {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: -10px;
+}
+
+.page-auth {
+  margin-top: 100px;
+}
+
+.page-auth .row-login {
+  min-height: 70vh;
+  width: 100%;
+}
+
+.page-auth .row-login .gambar {
+  margin-left: 200px;
+  -webkit-box-shadow: 0px 4px 15px #f1f1f8;
+          box-shadow: 0px 4px 15px #f1f1f8;
+}
+
+.page-auth .row-login .login-form {
+  margin-left: -20px;
+  -webkit-box-shadow: 0px 4px 15px #f1f1f8;
+          box-shadow: 0px 4px 15px #f1f1f8;
+}
+
+.page-auth .row-login h2 {
+  font-weight: 200;
+  font-size: 28px;
+  color: #0c0d36;
+}
+
+.page-auth .row-login .form-control {
+  background: #f3f3f3;
+  border-radius: 8px;
+}
+
+.page-auth .row-login .btn-signup {
+  color: #212529;
+  background-color: #f3f3f3;
+  border-color: transparent;
+  border-radius: 8px;
+}
+
+.page-auth .row-login .btn-signup:hover {
+  color: #212529;
+  background-color: #e0e0e0;
+  border-color: rgba(0, 0, 0, 0);
+}
+
+.page-auth .row-login .btn-signup:focus, .page-auth .row-login .btn-signup.focus {
+  color: #212529;
+  background-color: #e0e0e0;
+  border-color: rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(33, 37, 41, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(33, 37, 41, 0.5);
+}
+
+.page-auth .row-login .btn-signup.disabled, .page-auth .row-login .btn-signup:disabled {
+  color: #212529;
+  background-color: #f3f3f3;
+  border-color: transparent;
+}
+
+.page-auth .row-login .btn-signup:not(:disabled):not(.disabled):active, .page-auth .row-login .btn-signup:not(:disabled):not(.disabled).active,
+.show > .page-auth .row-login .btn-signup.dropdown-toggle {
+  color: #212529;
+  background-color: #dadada;
+  border-color: rgba(0, 0, 0, 0);
+}
+
+.page-auth .row-login .btn-signup:not(:disabled):not(.disabled):active:focus, .page-auth .row-login .btn-signup:not(:disabled):not(.disabled).active:focus,
+.show > .page-auth .row-login .btn-signup.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(33, 37, 41, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(33, 37, 41, 0.5);
+}
+
+.golf-home .jumbotron {
+  min-height: 620px;
+  background-image: url("../../images/golf1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 70%;
+}
+
+.golf-home .jumbotron .text-jumbo {
+  margin-top: 150px;
+}
+
+.golf-home .jumbotron .text-jumbo .heading {
+  color: #ffffff;
+}
+
+.golf-home .info .info-text {
+  font-weight: 300;
+  display: none;
+}
+
+.golf-home .info .home-info {
+  font-weight: 300;
+}
+
+.golf-home .info .button .detail {
+  background-color: #fda0a0;
+}
+
+.golf-home .info .button .detail:hover {
+  background-color: #0e0d0d;
+  color: #fda0a0;
+}
+
+.golf-home .info .price {
+  font-weight: bold;
+  color: #0a0a0a;
+  display: none;
+}
+
+.golf-home .info .price .text-price {
+  margin-top: -14px;
+  margin-bottom: 5px;
+}
+
+.golf-home .info .price .weekend {
+  color: #4cf363;
+}
+
+.golf-home .info .price .weekday {
+  color: #f1c42d;
+}
+
+.golf-home .info .home-price {
+  font-weight: bold;
+  color: #0a0a0a;
+}
+
+.golf-home .info .home-price .text-price {
+  margin-top: -14px;
+  margin-bottom: 5px;
+}
+
+.golf-home .info .home-price .weekend {
+  color: #4cf363;
+}
+
+.golf-home .info .home-price .weekday {
+  color: #f1c42d;
+}
+
+.page-jadwal {
+  margin-top: 100px;
+}
+
+.page-lapangan {
+  margin-top: 100px;
+}
+
+.page-lapangan .lapangan-title {
+  font-weight: 400;
+  font-size: 24px;
+  /* identical to box height */
+  color: #0c0d36;
+}
+
+.page-lapangan .lapangan-subtitle {
+  font-weight: normal;
+  font-size: 18px;
+  margin-top: 10px;
+  color: #504f4f;
+}
+
+.page-lapangan .kode-lapangan {
+  text-align: center;
+  padding-top: 13px;
+  margin: auto;
+  width: 300px;
+  border-radius: 8px;
+  height: 50px;
+  color: #ffff;
+  background-color: #7e7e92;
+}
+
+.page-profile {
+  margin-top: 90px;
+}
+
+.page-profile .form-group .address {
+  text-align: start;
+}
+
+.card {
+  background: #fefefe;
+  -webkit-box-shadow: 0px 4px 15px #f1f1f8;
+          box-shadow: 0px 4px 15px #f1f1f8;
+  border-radius: 8px;
+  border: none;
+  text-decoration: none !important;
+  margin: 30px;
+}
+
+.card .dashboard-card-title {
+  font-weight: 200;
+  font-size: 16px;
+  color: #c5c5c5;
+}
+
+.card .dashboard-card-subtitle {
+  font-weight: 600;
+  font-size: 32px;
+  color: #0c0d36;
 }
 /*# sourceMappingURL=main.css.map */

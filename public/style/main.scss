@@ -1,1 +1,13 @@
+// @import "../vendor/bootstrap/scss/bootstrap.scss";
+
 @import "../vendor/bootstrap/scss/bootstrap.scss";
+@import "navbar";
+@import "global";
+@import "fonts";
+//pages
+@import "pages/dashboard";
+@import "pages/auth";
+@import "pages/welcome";
+@import "pages/jadwal";
+// components
+@import "components/card-dashboard";

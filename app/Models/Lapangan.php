@@ -12,4 +12,9 @@ class Lapangan extends Model
      
 
     protected $fillable = ['kode_lapangan' , 'tee_box'];
+    // public function jadwal(){
+
+    //     return $this->belongsTo(Jadwal::class, 'id_lapangan' , 'id');
+    // }
+
 }

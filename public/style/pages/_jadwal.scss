@@ -1,0 +1,39 @@
+.page-jadwal {
+    margin-top: 100px;
+}
+.page-lapangan {
+    margin-top: 100px;
+    .lapangan-title {
+        font-weight: 400;
+        font-size: 24px;
+
+        /* identical to box height */
+
+        color: #0c0d36;
+    }
+    .lapangan-subtitle {
+        font-weight: normal;
+        font-size: 18px;
+
+        margin-top: 10px;
+        color: #504f4f;
+    }
+    .kode-lapangan {
+        text-align: center;
+        padding-top: 13px;
+        margin: auto;
+        width: 300px;
+        border-radius: 8px;
+        height: 50px;
+        color: #ffff;
+        background-color: #7e7e92;
+    }
+}
+.page-profile {
+    margin-top: 90px;
+    .form-group {
+        .address {
+            text-align: start;
+        }
+    }
+}

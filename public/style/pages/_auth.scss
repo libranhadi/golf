@@ -1,0 +1,30 @@
+.page-auth {
+    margin-top: 100px;
+    .row-login {
+        min-height: 70vh;
+
+        width: 100%;
+        .gambar {
+            margin-left: 200px;
+            box-shadow: 0px 4px 15px #f1f1f8;
+        }
+        .login-form {
+            margin-left: -20px;
+            box-shadow: 0px 4px 15px #f1f1f8;
+        }
+        h2 {
+            font-weight: 200;
+            font-size: 28px;
+
+            color: #0c0d36;
+        }
+        .form-control {
+            background: #f3f3f3;
+            border-radius: 8px;
+        }
+        .btn-signup {
+            @include button-variant(#f3f3f3, transparent);
+            border-radius: 8px;
+        }
+    }
+}
