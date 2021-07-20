@@ -118,14 +118,7 @@
           
         }
 
-        // $('#print').click(function () {
-        //     let awal = $('#tgl_awal').val();
-        //     let akhir =  $('#tgl_akhir').val();
-        //     const print = $.ajax({
-        //         url: 'print/' + awal + '/' + akhir,
-        //         type: 'get',
-        //     });
-        // })
+       
 
 
     })

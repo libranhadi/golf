@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\sewaController;
+use App\Http\Controllers\SewaController;
 
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\ProfileController;
@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PelangganController;
 use App\Http\Controllers\Admin\PenyewaanController;
 use App\Http\Controllers\Admin\PembayaranController;
+use App\Http\Controllers\TransaksiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -100,12 +101,20 @@ Route::get('print/{tgl_awal}/{tgl_akhir}', [LaporanController::class, 'print'])-
     
 // });
 // Route::resource('penyewaan', PenyewaanController::class);
+Route::get('history/penyewaan/{id}', [SewaController::class, 'index'])->name('history-sewa');
+Route::get('/pages/penyewaan', [SewaController::class, 'create'])->name('sewa-lapangan');
+Route::post('/penyewaan', [SewaController::class, 'store'])->name('store-sewa');
 
-Route::get('/pages/penyewaan', [sewaController::class, 'index']);
+Route::get('pages/detail/{id}', [SewaController::class, 'show'])->name('pages-detail');
 Route::get('pages/jadwal', [PagesController::class, 'jadwal'])->name('jadwal-index');
 Route::get('pages/lapangan', [PagesController::class, 'lapangan'])->name('lapangan-pages');
 Route::get('profile/{name}', [ProfileController::class, 'edit'])->name('profile-account');
 Route::put('profile/{id}',[ProfileController::class, 'update'])->name('profile-update');
+Route::delete('batal-sewa/{id}', [SewaController::class, 'destroy'])->name('batal-sewa');
+//bayar
+Route::get('pages/bayar/{id}', [TransaksiController::class, 'create'])->name('pages-bayar');
+Route::post('pages/bayar/{id}', [TransaksiController::class, 'store'])->name('store-bayar');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

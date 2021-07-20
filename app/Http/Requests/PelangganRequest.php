@@ -27,7 +27,7 @@ class PelangganRequest extends FormRequest
             'name' => ['required', 'string', 'max:255'],
             'gender' => ['required', 'string'],
             'phone_number' => ['required',  'min:11'],
-            'address' => ['max:125'],
+            'address' => ['max:125' , 'required'],
         ];
     }
 }

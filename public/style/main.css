@@ -11208,8 +11208,39 @@ footer p {
   margin-top: 90px;
 }
 
-.page-profile .form-group .address {
-  text-align: start;
+.page-sewa {
+  margin-top: 100px;
+}
+
+.page-history {
+  margin-top: 90px;
+}
+
+.page-detail {
+  margin-top: 90px;
+}
+
+.page-detail .card {
+  background: #fefefe;
+  -webkit-box-shadow: 0px 4px 8px #f1f1f8;
+          box-shadow: 0px 4px 8px #f1f1f8;
+  border-radius: 5px;
+  border: none;
+  text-decoration: none !important;
+}
+
+.page-detail .card .detail-title {
+  font-weight: 400;
+  font-size: 24px;
+  /* identical to box height */
+  color: #0c0d36;
+}
+
+.page-detail .card .detail-subtitle {
+  font-weight: normal;
+  font-size: 18px;
+  margin-top: 10px;
+  color: #504f4f;
 }
 
 .card {

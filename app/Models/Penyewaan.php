@@ -17,6 +17,9 @@ class Penyewaan extends Model
     public function jadwal(){
         return $this->hasOne(Jadwal::class, 'id', 'id_jadwal');
     }
+    public function pembayaran(){
+        return $this->belongsTo(Pembayaran::class, 'id' , 'id_penyewaan');
+    }
 
     
 }

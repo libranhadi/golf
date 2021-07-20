@@ -21,7 +21,7 @@
            <div class="container">
                <div class="row">
                 <div class="col-md-6" data-aos-delay="150" data-aos="fade-right">
-                    <img src="https://images.unsplash.com/flagged/photo-1576448438685-9f5e5b283d4f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDF8fGdvbGYlMjBjb3Vyc2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+                    <img src="{{ url('/images/people-golf.jpg') }}" alt="">
                 </div>
                 <div class="col-md-6">
                     <h1 class="mb-4" data-aos="fade-down">Stay Healthy And Keep Your Immune</h1>
@@ -53,7 +53,7 @@
                     </div>
                     <div class="button">
 
-                        <a href="" class="btn detail" id="detail" data-aos="fade-up" data-aos-delay="300"> Booking</a>
+                        <a href="{{ route('sewa-lapangan') }}" class="btn detail" id="detail" data-aos="fade-up" data-aos-delay="300"> Booking</a>
                     </div>
                     </div>
                 </div>

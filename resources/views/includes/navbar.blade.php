@@ -25,7 +25,7 @@
             </li>
             @guest
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="{{ route('lapangan-pages') }}">Lapangan</a>
             </li>
                     @if (Route::has('login'))
                     <li class="nav-item">
@@ -45,11 +45,9 @@
                   <!-- dekstop navbar menu -->
           <ul class="navbar-nav d-none d-lg-flex">
              <li class="nav-item">
-              <a class="nav-link" href="">Penyewaan</a>
+              <a class="nav-link" href="{{ route('history-sewa', Auth::user()->id) }}">Penyewaan</a>
             </li>
-             <li class="nav-item">
-              <a class="nav-link" href="{{ route('lapangan-pages') }}">Lapangan</a>
-            </li>
+             
             <li class="nav-item dropdown">
               <a
                 href=""

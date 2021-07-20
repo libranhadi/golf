@@ -1,0 +1,32 @@
+.page-sewa {
+    margin-top: 100px;
+}
+.page-history {
+    margin-top: 90px;
+}
+.page-detail {
+    margin-top: 90px;
+    .card {
+        background: #fefefe;
+        box-shadow: 0px 4px 8px #f1f1f8;
+        border-radius: 5px;
+        border: none;
+        text-decoration: none !important;
+
+        .detail-title {
+            font-weight: 400;
+            font-size: 24px;
+
+            /* identical to box height */
+
+            color: #0c0d36;
+        }
+        .detail-subtitle {
+            font-weight: normal;
+            font-size: 18px;
+
+            margin-top: 10px;
+            color: #504f4f;
+        }
+    }
+}

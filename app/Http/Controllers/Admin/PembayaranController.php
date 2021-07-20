@@ -11,7 +11,7 @@ class PembayaranController extends Controller
 {
     public function index(Request $request){
       if(request()->ajax()){
-           $query = Pembayaran::with('user', 'jadwal' , 'penyewaan')->get();
+           $query = Pembayaran::with(['user' , 'jadwal' , 'penyewaan'])->get();
            return Datatables::of($query)
            ->addColumn('photo', function($pembayaran){
             return '
@@ -71,7 +71,10 @@ class PembayaranController extends Controller
     }
 
     public function delete($id){
+      // dd($id);
+      // $tes = Pembayaran::where('id', $id)->get();
       $attr = Pembayaran::findOrFail($id);
+      // dd($attr);
       $attr->delete();
       return redirect()->back();
     }

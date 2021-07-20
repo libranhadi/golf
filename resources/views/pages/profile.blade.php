@@ -1,7 +1,5 @@
-@extends('layouts.test', ['title' => 'Jadwal'])
-  @push('after-style')
-        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    @endpush
+@extends('layouts.test', ['title' => 'Profile'])
+  
 @section('content')
 <div class="page-profile">
     <section class="section-profile">
@@ -64,9 +62,7 @@
                                          <div class="form-group">
                                             <label for="">Alamat</label>
                                             {{-- @if ($user->address) --}}
-                                            <textarea name="address" id="" cols="30" rows='5' class="form-control address" value="{{ $user->address }}">
-                                               
-                                            </textarea>
+                                            <textarea name="address" id="" cols="30" rows='5' class="form-control">{{ $user->address }}</textarea>
                                             {{-- @endif --}}
                                         </div>
                                     </div>

@@ -25,7 +25,7 @@ class PenyewaanRequest extends FormRequest
     {
         return [
             'users_id' => 'required',
-            'id_jadwal' => 'required',
+            'id_jadwal' => 'required|unique:penyewaans',
             'status_penyewaan' => 'required',
         ];
     }

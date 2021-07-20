@@ -53,12 +53,12 @@
 
                             <input id="phone" type="number" class="form-control @error('phone') is-invalid @enderror" name="phone_number" value="{{ old('phone_number') ?? $karyawan->phone_number}}" >
 
-                             @error('phone')
-                                      <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                            @enderror
                         </div>
+                        @error('phone')
+                                 <span class="invalid-feedback" role="alert">
+                                       <strong>{{ $message }}</strong>
+                                   </span>
+                       @enderror
                          <div class="form-group">
                                                                 <label for="gender" class=" col-form-label text-md-right">{{ __('Gender') }}</label>
 

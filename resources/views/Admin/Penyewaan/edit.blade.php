@@ -52,7 +52,7 @@
                     <div class="form-group">
                         <label for="nama">Nama Penyewa</label>
                         
-                        <input type="text" id="nama_penyewa" value="{{ $penyewaan->user->name }}" class="form-control iya @error('nama_penyewa') is-invalid @enderror" style="border : none"   value="{{ old('nama_penyewa') ?? $penyewaan->nama_penyewa}}">
+                        <input type="text" id="nama_penyewa" value="{{ $penyewaan->user->name }}" class="form-control iya @error('nama_penyewa') is-invalid @enderror" style="border : none"   value="{{ old('nama_penyewa') ?? $penyewaan->nama_penyewa}}" readonly>
                       
                         
                     </div>
@@ -87,7 +87,7 @@
                        
                      <div class="form-group">
                         <label for="">Harga</label>
-                        <input type="text" class="form-control" id="harga" name="harga" value="{{ $penyewaan->jadwal->harga }}">
+                        <input type="text" class="form-control" id="harga" name="harga" value="{{ $penyewaan->jadwal->harga }}" readonly>
                     </div>
                     <div class="form-group ">
                                 <button type="submit" class="btn btn-primary" id="button">

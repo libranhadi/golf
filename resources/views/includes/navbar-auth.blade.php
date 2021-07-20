@@ -24,7 +24,7 @@
               <a class="nav-link" href="{{ route('jadwal-index') }}">Jadwal</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="{{ route('lapangan-pages') }}">Lapangan</a>
             </li>
             
                   <!-- dekstop navbar menu -->

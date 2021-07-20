@@ -82,8 +82,7 @@ class PenyewaanController extends Controller
         $attr['kode_sewa'] = $code;
         $sewa = Penyewaan::create($attr);
         $kode = 'PL' . '-' . mt_rand(000,999);
-        // $created = Carbon::now()->isoFormat('YYYY-MM-DD');
-    //    $date =  Carbon::createFromFormat('d/m/Y', $this->created_at)->format('Y-m-d');
+       
 
         if ($sewa->status_penyewaan == 'SUDAH BAYAR') {
             

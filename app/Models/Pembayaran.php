@@ -21,14 +21,14 @@ class Pembayaran extends Model
     }
     //pembayaran menuju user dengan relasi satu user memiliki banyak pembayaran
     public function user(){
-        return $this->belongsTo(User::class, 'users_id' , 'id');
+        return $this->belongsTo(User::class, 'users_id','id');
     }
 
     public function paid(){
         if (!$this->bukti_bayar) {
             return asset('images/default.png');
         }
-        Storage::url($this->bukti_bayar);
+        return Storage::url($this->bukti_bayar);
     }
    
 }

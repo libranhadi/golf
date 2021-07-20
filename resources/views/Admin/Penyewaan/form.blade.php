@@ -4,7 +4,17 @@
         <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
        
     @endpush
-       
+       <div class="col-md-12">
+             @if ($errors->any())
+                                        <div class="alert alert-danger">
+                                            <ul>
+                                                @foreach ($errors->all() as $error)
+                                                    <li>{{$error}}</li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                @endif
+        </div>
     <div class="card">
         <div class="card-body">
             <div class="row justify-content-center">
@@ -17,7 +27,7 @@
                          @enderror
                     <div class="form-group">
                         <label for="jadwal">Kode Jadwal</label>
-                         <select name="id_jadwal" id="jadwal" class="form-control select2 @error('teebox') is-invalid @enderror" >
+                         <select name="id_jadwal" id="jadwal" class="form-control select2 @error('kdjadwal') is-invalid @enderror" required>
                                   
                              <option value="pilih">-- PILIH OPSI --</option>
                         @foreach ($jadwal as $jadwal)
@@ -26,17 +36,17 @@
                         @endforeach
                         </select>
 
-                        @error('tee_box')
-                                <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                </span>
-                         @enderror
                     </div>
+                    @error('kdjadwal')
+                            <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                            </span>
+                     @enderror
                     
                     <div class="form-group">
                         <label for="nama">Nama Penyewa</label>
                         
-                        <input type="text" id="nama_penyewa" class="form-control iya @error('nama_penyewa') is-invalid @enderror" style="border : none"   value="{{ old('nama_penyewa') ?? $penyewaan->nama_penyewa}}">
+                        <input type="text" id="nama_penyewa" class="form-control iya @error('nama_penyewa') is-invalid @enderror" style="border : none"   value="{{ old('nama_penyewa') ?? $penyewaan->nama_penyewa}}" readonly>
                       
                         
                     </div>
@@ -71,7 +81,7 @@
                        
                      <div class="form-group">
                         <label for="">Harga</label>
-                        <input type="text" class="form-control" id="harga" name="harga" >
+                        <input type="text" class="form-control" id="harga" name="harga" readonly>
                     </div>
                     <div class="form-group ">
                                                                <button type="submit" class="btn btn-primary" id="button">

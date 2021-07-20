@@ -6,7 +6,7 @@
         <div class="container">
             <div class="row align-items-center row-login">
                 <div class="col-lg-5 text-center">
-                    <img src="https://images.unsplash.com/photo-1592967449177-d88a95223c86?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGdvbGYlMjBjbHVifGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" class="w-50 gambar mb-lg-none">
+                    <img src="{{ url("/images/login-page.jpg") }}" alt="" class="w-50 gambar mb-lg-none">
                 </div>
                 <div class="col-lg-5 login-form">
                     <h2 class="my-3 mx-3">Login</h2>

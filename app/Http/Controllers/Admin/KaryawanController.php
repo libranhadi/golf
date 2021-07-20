@@ -44,9 +44,12 @@ class KaryawanController extends Controller
     }
     public function store(PelangganRequest $request){
         $this->validate($request,[
+            'name' => ['required'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:6'],
             'roles' => ['string'],
+            'phone_number' => ['required'],
+            'address' => ['required']
         ]);
         $attr=$request->all();
         $attr['password'] = bcrypt($request->password);

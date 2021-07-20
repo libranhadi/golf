@@ -131,10 +131,12 @@
                                             <option value="PENDING" class="text-warning">PENDING</option>
 
                                             @else
+                                            <option value="{{ $pembayaran->status_pembayaran }}" class="text-warning">{{ $pembayaran->status_pembayaran }}</option>
+                                            <option value="SUCCESS" class="text-success">SUCCESS</option>
+                                            @endif
                                             <span class="invalid-feedback" role="alert">
                                             <strong>STATUS TIDAK DIKETAHUI</strong>
                                           </span>
-                                            @endif
                                         
                                             </select>
 

@@ -13,7 +13,8 @@ class Jadwal extends Model
         'users_id' , 'id_lapangan', 'kode_jadwal', 'harga', 'tanggal_main', 'jam_mulai'
     ];
     public function user(){
-        return $this->hasOne(User::class, 'id', 'users_id');
+        // rubah sebenrat
+        return $this->belongsTo(User::class, 'users_id', 'id');
     }
     public function lapangan(){
         return $this->belongsTo(Lapangan::class, 'id_lapangan' , 'id');

@@ -36,7 +36,7 @@
                     <div class="form-group">
                         <label for="harga">Harga Sewa</label>
                         <input type="number" id="harga" class="form-control @error('harga') is-invalid @enderror"
-                         name="harga" value="{{ old('harga') ?? $jadwal->harga}}" required >
+                         name="harga" value="{{ old('harga') ?? $jadwal->harga}}" required readonly>
                     </div>
                         @error('harga')
                         <span class="invalid-feedback" role="alert">

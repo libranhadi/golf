@@ -37,7 +37,7 @@
                                                     <tr>
                                                         <th>ID</th>
                                                          <th>Name</th>
-                                                         <th>Email</th>
+                                                         <th>No Phone</th>
                                                          <th>Harga</th> 
                                                          <th>Kode</th> 
                                                          <th>Status</th>
@@ -51,7 +51,6 @@
                                                     </tbody>
                                                 </table>
                                             </div>     
-                                            {{-- <a href="" class="btn btn-success justify-content-between">Cetak</a> --}}
                                         </div>
 
                                     </div>
@@ -76,7 +75,7 @@
         columns: [
             {data: 'id' , name: 'id'},
             {data: 'user.name' , name: 'user.name'},
-            {data: 'user.email' , name: 'user.email'},
+            {data: 'user.phone_number' , name: 'user.phone_number'},
             {data: 'jadwal.harga' , name: 'jadwal.harga'},
             {data: 'kode_pembayaran' , name: 'kode_pembayaran'},
             {data: 'status_pembayaran' , name: 'status_pembayaran'},
