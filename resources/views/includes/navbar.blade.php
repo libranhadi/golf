@@ -23,10 +23,10 @@
             <li class="nav-item">
               <a class="nav-link" href="{{ route('jadwal-index') }}">Jadwal</a>
             </li>
-            @guest
             <li class="nav-item">
               <a class="nav-link" href="{{ route('lapangan-pages') }}">Lapangan</a>
             </li>
+            @guest
                     @if (Route::has('login'))
                     <li class="nav-item">
                     <a class="nav-link" href="{{ route('login') }}">Sign In</a>
